@@ -1,8 +1,8 @@
-package day004;
+package day005;
+
+import java.util.Arrays;
 
 public class hw1 {
-    // 三傻排序
-    // 好久没写了
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -60,17 +60,48 @@ public class hw1 {
         }
         System.out.println();
     }
-
-
+    public static boolean sameArr(int[] arr1, int[] arr2) {
+        int n = arr1.length;
+        int m = arr2.length;
+        if (n != m) {
+            return false;
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int[] randomArray(int n, int v) {
+        // 数组长度n, 值为1-v之间
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = (int)(Math.random() * v) + 1;
+        }
+        return arr;
+    }
     public static void main(String[] args) {
-        int[] arr1 = new int[]{1,3,4,2,9,8,6,7, 5,10};
-        int[] arr2 = copyArr(arr1);
-        int[] arr3 = copyArr(arr1);
-        selectionSort(arr1);
-        printArr(arr1);
-        bubbleSort(arr2);
-        printArr(arr2);
-        insertionSort(arr3);
-        printArr(arr3);
+        int N = 200;
+        int V = 1000;
+        int testTimes = 5000;
+        System.out.println("测试开始");
+        for (int i = 0; i < testTimes; i++) {
+            int n = (int)(Math.random() * N);
+            int[] arr = randomArray(n, V);
+            int[] arr1 = copyArr(arr);
+            int[] arr2 = copyArr(arr);
+            int[] arr3 = copyArr(arr);
+            selectionSort(arr1);
+            bubbleSort(arr2);
+            insertionSort(arr3);
+            Arrays.sort(arr);
+            if (!sameArr(arr, arr1) || !sameArr(arr,arr2) || !sameArr(arr,arr3)) {
+                System.out.println("出错了！");
+            }
+        }
+        System.out.println("测试结束");
+
+
     }
 }

@@ -1,4 +1,4 @@
-package day06;
+package day006;
 
 public class hw4 {
     public int findPeakElement(int[] nums) {
