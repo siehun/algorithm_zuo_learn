@@ -1,7 +1,7 @@
 package day005;
 
 import java.util.Arrays;
-
+// 选择，插入，冒泡排序对数器验证
 public class hw1 {
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];

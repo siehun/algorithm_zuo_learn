@@ -1,6 +1,7 @@
 package day006;
 
 import java.util.Arrays;
+// 有序数组中找>=num的最左位置
 
 public class hw2 {
     public static void main(String[] args) {
@@ -41,7 +42,6 @@ public class hw2 {
     }
 
     // 保证arr有序，才能用这个方法
-    // 有序数组中找>=num的最左位置
 
     // 数组从小到大排序
     public static int findLeft(int[] arr, int num) {

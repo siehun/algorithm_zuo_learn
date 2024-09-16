@@ -2,8 +2,8 @@ package day006;
 
 import java.util.Arrays;
 
+// 二分搜索某个数是否存在
 public class hw1 {
-    // 二分搜索某个数是否存在
     // 为了验证
     public static void main(String[] args) {
         int N = 100;

@@ -1,5 +1,6 @@
 package day003;
 
+// 打印一个数的二进制表示
 public class hw1 {
     public static void printBinary(int num) {
         for (int i = 31; i >= 0; i--) {

@@ -5,7 +5,8 @@ package day006;
 // 你可以假设 nums[-1] = nums[n] = 无穷小
 // 你必须实现时间复杂度为 O(log n) 的算法来解决此问题。
 // 测试链接 : https://leetcode.cn/problems/find-peak-element/
-// 测试链接 : https://leetcode.com/problems/find-peak-element/
+// 测试链接 :
+// https://leetcode.com/problems/find-peak-element/
 public class hw4 {
     public int findPeakElement(int[] nums) {
         int n = nums.length;

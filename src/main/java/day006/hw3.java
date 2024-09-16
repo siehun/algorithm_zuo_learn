@@ -1,6 +1,7 @@
 package day006;
 
 import java.util.Arrays;
+// 有序数组中找<=num的最右位置
 
 public class hw3 {
     // 为了验证
@@ -42,7 +43,6 @@ public class hw3 {
     }
 
     // 保证arr有序，才能用这个方法
-    // 有序数组中找<=num的最右位置
     // 数组从小到大排序
     public static int findRight(int[] arr, int num) {
         if (arr == null || arr.length == 0) {

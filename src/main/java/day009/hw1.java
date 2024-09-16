@@ -1,7 +1,8 @@
 package day009;
 
 import java.util.List;
-
+// 单链表的反转
+// https://leetcode.com/problems/reverse-linked-list/description/
 public class hw1 {
     class ListNode {
         public int val;
