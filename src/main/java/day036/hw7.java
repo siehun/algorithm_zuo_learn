@@ -16,6 +16,9 @@ public class hw7 {
         }
     }
     public TreeNode buildTree(int[] preorder, int[] inorder) {
+//        if (preorder == null || inorder == null || preorder.length != inorder.length) {
+//            return null;
+//        }
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
@@ -36,7 +39,7 @@ public class hw7 {
         }
         int k = map.get(preorder[pl]);
         root.left = f(preorder, pl + 1, pl + k - il, inorder, il, k - 1, map);
-        root.right = f(preorder, pl + k - il, pr, inorder, k + 1, ir, map);
+        root.right = f(preorder, pl + k - il + 1, pr, inorder, k + 1, ir, map);
         return root;
     }
 
