@@ -1,7 +1,7 @@
 package day037;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 // 收集累加和等于aim的所有路径
 // 测试链接 : https://leetcode.cn/problems/path-sum-ii/
@@ -25,7 +25,7 @@ public class hw3 {
             if (targetSum == sum + root.val) {
                 path.add(root.val);
                 copy(ans, path);
-                path.removeLast();
+                path.remove(path.size() - 1);
             }
         } else {
             sum += root.val;
@@ -36,7 +36,7 @@ public class hw3 {
             if (root.right != null) {
                 f(root.right, targetSum, sum, path, ans);
             }
-            path.removeLast();
+            path.remove(path.size() - 1);
         }
     }
     public void copy(List<List<Integer>> ans, List<Integer> list) {
